@@ -1,0 +1,37 @@
+# Nama workflow yang akan tampil di GitHub
+name: Build and Push Docker Image
+
+# Trigger: Workflow akan berjalan saat ada push ke branch 'main'
+on:
+  push:
+    branches:
+      - main
+
+# Jobs: Tugas-tugas yang akan dijalankan
+jobs:
+  build:
+    # Runner: Mesin virtual yang akan menjalankan tugas (gunakan Ubuntu)
+    runs-on: ubuntu-latest
+
+    # Steps: Langkah-langkah detail dari tugas
+    steps:
+      # Step 1: Checkout kode dari repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Login ke Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }} # Gunakan secret dari GitHub
+          password: ${{ secrets.DOCKERHUB_TOKEN }}   # Gunakan secret dari GitHub
+
+      # Step 3: Build dan push Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: . # Konteks build adalah root directory
+          push: true # Push image ke registry
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-web-app:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/devops-web-app:${{ github.sha }}
