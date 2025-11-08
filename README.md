@@ -86,3 +86,51 @@ This is the recommended method to experience the containerized version of the ap
 ---
 
 ## 📁 Project Structure
+devops-web-app/
+├── .github/
+│ └── workflows/
+│ └── ci-cd.yml # GitHub Actions workflow
+├── public/
+│ ├── index.html # Main HTML page
+│ └── style.css # Stylesheet
+├── .gitignore # Files to ignore for Git
+├── Dockerfile # Recipe to build the Docker image
+├── package.json # Project metadata and dependencies
+└── server.js # Express.js server entry point
+
+---
+
+## 🤖 DevOps in Action
+
+This project is not just *about* DevOps; it *practices* DevOps.
+
+### 🐳 Containerization
+The application is packaged into a lightweight Docker container, ensuring it runs consistently across any environment. The `Dockerfile` contains all the necessary instructions to build the image from scratch.
+
+### 📚 Version Control
+All source code is managed with Git and hosted on GitHub. This allows for tracking changes, collaborating with others, and maintaining a history of the project.
+
+### 🔄 CI/CD (Continuous Integration/Continuous Deployment)
+The `.github/workflows/ci-cd.yml` file defines an automated pipeline. With every push to the `main` branch, GitHub Actions will:
+1.  **Build** the Docker image.
+2.  **Push** the image to a container registry (like Docker Hub).
+
+This automation minimizes manual errors and accelerates the deployment process.
+
+---
+
+## 🤝 Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+**Made with ❤️ and lots of ☕**
