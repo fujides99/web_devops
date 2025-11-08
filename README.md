@@ -4,10 +4,10 @@
 <p>
   <img src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js" alt="Node.js Version">
   <img src="https://img.shields.io/badge/Docker-Ready-blue?logo=docker" alt="Docker Ready">
-  <a href="https://github.com/fujides99/devops-web-app/actions/workflows/ci-cd.yml">
-    <img src="https://github.com/fujides99/devops-web-app/actions/workflows/ci-cd.yml/badge.svg" alt="CI/CD Status">
+  <a href="https://github.com/fujides99/web_devops/actions/workflows/ci-cd.yml">
+    <img src="https://github.com/fujides99/web_devops/actions/workflows/ci-cd.yml/badge.svg" alt="CI/CD Status">
   </a>
-  <img src="https://img.shields.io/github/license/fujides99/devops-web-app" alt="License">
+  <img src="https://img.shields.io/github/license/fujides99/web_devops" alt="License">
 </p>
 
 <!-- DESKRIPSI -->
