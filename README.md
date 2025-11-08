@@ -4,10 +4,10 @@
 <p>
   <img src="https://img.shields.io/badge/Node.js-18.x-green?logo=node.js" alt="Node.js Version">
   <img src="https://img.shields.io/badge/Docker-Ready-blue?logo=docker" alt="Docker Ready">
-  <a href="https://github.com/NAMA_USER_GITHUB/devops-web-app/actions/workflows/ci-cd.yml">
-    <img src="https://github.com/NAMA_USER_GITHUB/devops-web-app/actions/workflows/ci-cd.yml/badge.svg" alt="CI/CD Status">
+  <a href="https://github.com/fujides99/devops-web-app/actions/workflows/ci-cd.yml">
+    <img src="https://github.com/fujides99/devops-web-app/actions/workflows/ci-cd.yml/badge.svg" alt="CI/CD Status">
   </a>
-  <img src="https://img.shields.io/github/license/NAMA_USER_GITHUB/devops-web-app" alt="License">
+  <img src="https://img.shields.io/github/license/fujides99/devops-web-app" alt="License">
 </p>
 
 <!-- DESKRIPSI -->
@@ -46,7 +46,7 @@ Choose one of the methods below to get the application running.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/NAMA_USER_GITHUB/devops-web-app.git
+    git clone https://github.com/fujides99/devops-web-app.git
     cd devops-web-app
     ```
 
@@ -71,32 +71,17 @@ This is the recommended method to experience the containerized version of the ap
 
 1.  **Build the Docker Image**
     ```bash
-    docker build -t NAMA_DOCKER_HUB_ANDA/devops-web-app:latest .
+    docker build -t YOUR_DOCKER/devops-web-app:latest .
     ```
 
 2.  **Run the Docker Container**
     This command maps port 8080 on your machine to port 3000 inside the container.
     ```bash
-    docker run -d -p 8080:3000 --name my-devops-app NAMA_DOCKER_HUB_ANDA/devops-web-app:latest
+    docker run -d -p 8080:3000 --name my-devops-app YOUR_DOCKER/devops-web-app:latest
     ```
 
 3.  **Open your browser**
     Navigate to [http://localhost:8080](http://localhost:8080)
-
----
-
-## 📁 Project Structure
-devops-web-app/
-├── .github/
-│ └── workflows/
-│ └── ci-cd.yml # GitHub Actions workflow
-├── public/
-│ ├── index.html # Main HTML page
-│ └── style.css # Stylesheet
-├── .gitignore # Files to ignore for Git
-├── Dockerfile # Recipe to build the Docker image
-├── package.json # Project metadata and dependencies
-└── server.js # Express.js server entry point
 
 ---
 
