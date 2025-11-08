@@ -46,7 +46,7 @@ Choose one of the methods below to get the application running.
 
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/fujides99/devops-web-app.git
+    git clone https://github.com/fujides99/web_devops.git
     cd devops-web-app
     ```
 
