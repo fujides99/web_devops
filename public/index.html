@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Web App</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Selamat Datang di Dunia DevOps!</h1>
+            <p>Proyek ini adalah demonstrasi sederhana tentang konsep dan alat dalam DevOps.</p>
+        </header>
+
+        <main>
+            <section id="lifecycle">
+                <h2>Siklus Hidup DevOps</h2>
+                <div class="cycle-steps">
+                    <div class="step">Plan</div>
+                    <div class="step">Code</div>
+                    <div class="step">Build</div>
+                    <div class="step">Test</div>
+                    <div class="step">Release</div>
+                    <div class="step">Deploy</div>
+                    <div class="step">Operate</div>
+                    <div class="step">Monitor</div>
+                </div>
+            </section>
+
+            <section id="tools">
+                <h2>Alat-Alat DevOps Populer</h2>
+                <p>Data diambil dari API endpoint <code>/api/tools</code></p>
+                <ul id="tools-list">
+                    <!-- Daftar tools akan dimuat dengan JavaScript -->
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Mengambil data tools dari API kita
+        fetch('/api/tools')
+            .then(response => response.json())
+            .then(tools => {
+                const toolsList = document.getElementById('tools-list');
+                tools.forEach(tool => {
+                    const li = document.createElement('li');
+                    li.textContent = `${tool.name} (${tool.category})`;
+                    toolsList.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching tools:', error));
+    </script>
+</body>
+</html>
